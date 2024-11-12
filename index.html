@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="masestilos.css">
+
+	<title>videojuegos</title>
+</head>
+<body> 
+<header>
+
+    <style>
+        .container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .image {
+            display: none;
+            width: 100%;
+        }
+        .visible {
+            display: block;
+        }
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <img src="VIDEOJUEGOS.png" class="image visible" id="img1">
+        <img src="h3.png" class="image" id="img2">
+        <img src="h6.png" class="image" id="img3">
+        <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="nav-button next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.image');
+
+        function changeImage(direction) {
+            images[currentImageIndex].classList.remove('visible');
+            currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+            images[currentImageIndex].classList.add('visible');
+        }
+
+        function autoChangeImage() {
+            changeImage(1);
+        }
+
+        setInterval(autoChangeImage, 5000); // Cambia la imagen cada 5 segundos
+    </script>
+</body>
+</html>
+
+ 
+
+	
+</header>
+
+    <nav>
+    	<ul>
+    		<li><a href="inicio.html" target="contenido">INICIO</a></li>
+    		<li><a href="noticias.html"target="contenido">NOTICIAS</a></li>
+    		<li><a href="ordenadores.html"target="contenido">ORDENADORES</a></li>
+    		<li><a href="games.html"target="contenido">GAMES</a></li>
+    		<li><a href="promociones.html"target="contenido">PROMOCIONES</a></li>
+    		<li><a href="contacto.html"target="contenido">CONTACTO</a></li>
+    		<li><title>Búsqueda</title>
+    <style>
+        .search-container {
+            text-align: center;
+            margin-top: 3px;
+        }
+        .search-container input[type="text"] {
+            padding: 12px 6 PX;
+            font-size:16px;
+            border: 1px solid #ccc;
+            width: 30%;
+        }
+        .search-container button {
+            padding: 12px 6 PX;
+            font-size:15px;
+            border: 1 PX solid #ccc;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <form action="/search" method="GET">
+            <input type="text" placeholder="Buscar..." name="search">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+</body></li>
+    </ul>
+    
+    <main>
+	    <article>
+	    	<iframe src="inicio.html" name="contenido" width="800px" height="700px" frameborder="no" scrolling="auto"></iframe>
+	    </article>
+	    <aside>
+	    	
+	    		<div class="redes">
+            <ul>
+	    	<li><a href="https://twitter.com" target="_blank"><img src="x.png"></a></li>
+
+	    	<li><a href="https://twitter.com" target="_blank"><img src="x2.png"></a></li>
+
+	    	<li><a href="https://google.com" target="_blank"><img src="google.png"></a></li>
+
+	    	<li><a href="https://facebook.com" target="_blank"><img src="face.png"></a></li>
+
+	    	<li><a href="https://whatsaap.com" target="_blank"><img src="whats2.png"></a></li>
+            </ul>
+	    	</div>
+
+
+
+
+	    </aside>
+        </main>
+        <footer></footer>
+
+</body>
+
+
+  
+</body>
+</html>
